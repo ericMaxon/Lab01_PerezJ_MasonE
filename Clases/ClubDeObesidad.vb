@@ -1,6 +1,6 @@
 ﻿Public Class ClubDeObesidad
     Implements IDataBase
-    Private DBdata As List(Of Miembro) = New List(Of Miembro)
+    Private DBdata As New List(Of Miembro)
 
     Public Sub AddNewMember(user As String, password As String, name As String) Implements IDataBase.AddNewMember
         Dim ranValue As Integer = Rnd()
@@ -9,19 +9,19 @@
     End Sub
 
     Public Function GetMember(identifier As String) As Miembro Implements IDataBase.GetMember
-        Dim userCredentials As Miembro = Nothing
+        Dim miembroInfo As Miembro = Nothing
         For Each member As Miembro In DBdata
             If (identifier = member.Get_Id) Then
-                userCredentials = member
+                miembroInfo = member
             End If
         Next
-        Return userCredentials
+        Return miembroInfo
     End Function
 
-    Public Function ValidateUser(validateMem As Miembro) As Miembro Implements IDataBase.ValidateUser
+    Public Function ValidateUser(user As String, password As String) As String Implements IDataBase.ValidateUser
         For Each miembro As Miembro In DBdata
-            If (validateMem.Get_User = miembro.Get_User And validateMem.Get_Pass = miembro.Get_Pass) Then
-                Return miembro
+            If (user = miembro.Get_User And password = miembro.Get_Pass) Then
+                Return miembro.Get_Id()
             End If
         Next
         Return Nothing

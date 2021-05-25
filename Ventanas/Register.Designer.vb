@@ -31,7 +31,7 @@ Partial Class Register
         Me.btnCreate = New System.Windows.Forms.Button()
         Me.btnShowPassword = New System.Windows.Forms.Button()
         Me.namelbl = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.tbxName = New System.Windows.Forms.TextBox()
         Me.btnFinish = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -73,12 +73,12 @@ Partial Class Register
         'Title
         '
         Me.Title.AutoSize = True
-        Me.Title.Font = New System.Drawing.Font("Segoe UI Emoji", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Title.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Title.Location = New System.Drawing.Point(248, 30)
         Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(123, 16)
+        Me.Title.Size = New System.Drawing.Size(121, 21)
         Me.Title.TabIndex = 12
-        Me.Title.Text = "Crear nuevo miembro"
+        Me.Title.Text = "Miembro nuevo"
         '
         'btnHveAcc
         '
@@ -116,13 +116,13 @@ Partial Class Register
         Me.namelbl.TabIndex = 18
         Me.namelbl.Text = "Nombre"
         '
-        'TextBox1
+        'tbxName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(291, 91)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PlaceholderText = "Nombre"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox1.TabIndex = 19
+        Me.tbxName.Location = New System.Drawing.Point(291, 91)
+        Me.tbxName.Name = "tbxName"
+        Me.tbxName.PlaceholderText = "Nombre"
+        Me.tbxName.Size = New System.Drawing.Size(100, 23)
+        Me.tbxName.TabIndex = 19
         '
         'btnFinish
         '
@@ -139,7 +139,7 @@ Partial Class Register
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(586, 411)
         Me.Controls.Add(Me.btnFinish)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tbxName)
         Me.Controls.Add(Me.namelbl)
         Me.Controls.Add(Me.btnShowPassword)
         Me.Controls.Add(Me.tbxPass)
@@ -166,6 +166,6 @@ Partial Class Register
     Friend WithEvents btnCreate As Button
     Friend WithEvents btnShowPassword As Button
     Friend WithEvents namelbl As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents tbxName As TextBox
     Friend WithEvents btnFinish As Button
 End Class

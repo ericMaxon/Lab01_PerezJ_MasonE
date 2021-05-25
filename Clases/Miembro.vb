@@ -1,11 +1,15 @@
 ﻿Public Class Miembro
     Private Nombre As String
-    Private Pesos As List(Of Double) = New List(Of Double)
-    Private credenciales As IUserCredentials = New UserCredentials()
-    Private RegistroDePromedio As List(Of Double) = New List(Of Double)
+    Private Pesos As New List(Of Double)
+    Public credenciales As IUserCredentials
+    Private RegistroDePromedio As New List(Of Double)
+
+    Public Sub New()
+        NombreProp = ""
+    End Sub
     Public Sub New(user As String, pass As String, identifier As String, name As String)
         NombreProp = name
-        Me.AsignarCredenciales(user, pass, identifier)
+        credenciales = New UserCredentials(user, pass, identifier)
     End Sub
     Public Property NombreProp As String
         Get
@@ -15,22 +19,38 @@
             Nombre = value
         End Set
     End Property
-    Public Sub InsertarPeso(peso As Double)
-        Pesos.Add(peso)
-    End Sub
     Private Sub AsignarCredenciales(user As String, password As String, identifier As String)
         Me.credenciales.UserProp = user
         Me.credenciales.PwProp = password
         Me.credenciales.IdProp = identifier
     End Sub
-    Public Sub Promedio()
-        Dim acumulador As Double
+    Public Sub InsertarPeso(peso As Double)
+        Pesos.Add(peso)
+    End Sub
+    Public Sub CalcularPromedio()
+        ' Sub que obtiene los pesos y asigna el promedio al registro
+        Dim acumuladorPesos As Double
+        Dim cantidadPesos As Integer = Pesos.Count
         For Each peso As Double In Pesos
-            acumulador += peso
+            acumuladorPesos += peso
+            ' Se eliminan los pesos para reiniciar la Lista de Pesos
             Pesos.Remove(peso)
         Next
-        RegistroDePromedio.Add(acumulador / 3)
+        RegistroDePromedio.Add(acumuladorPesos / cantidadPesos)
     End Sub
+    Public Function ObtenerComentario() As String
+        ' Se verifica que en el registro se haya ingresado mas de 1 promedio
+        If RegistroDePromedio.Count > 1 Then
+            Dim promedioAnterior As Double = RegistroDePromedio.ElementAt(RegistroDePromedio.Count - 2) ' Sacando el valor anterior
+            Dim diferencia As Double = promedioAnterior - RegistroDePromedio.Last()
+            If diferencia > 0 Then
+                Return "SUBIO"
+            Else
+                Return "BAJO"
+            End If
+        End If
+        Return "Debe volver a realizar el ritual para comprobar la mejora"
+    End Function
     Public Function Get_User() As String
         Return Me.credenciales.UserProp
     End Function
@@ -42,5 +62,8 @@
     End Function
     Public Function Get_Registro() As List(Of Double)
         Return RegistroDePromedio
+    End Function
+    Public Function Get_Pesos() As List(Of Double)
+        Return Pesos
     End Function
 End Class

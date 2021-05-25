@@ -11,9 +11,9 @@
         End Set
     End Property
 
+    ' Funcion encargada a la lectura de valores double a unado a validaciones
     Public Function readingDouble(mensaje As String) As Double Implements ILectura.readingDouble
         Dim err As Boolean
-
         Do
             Try
                 err = False
