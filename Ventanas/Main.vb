@@ -16,6 +16,9 @@
         Me.tbxPass.Text = Me.miembroInfo.Get_Pass()
         Me.tbxUser.PlaceholderText = Me.miembroInfo.Get_User()
         Me.tbxPass.PlaceholderText = Me.miembroInfo.Get_Pass()
+        If Me.miembroInfo.Get_Registro().Count Then
+            InsertarData()
+        End If
     End Sub
 
     Private Sub btnGB_Click(sender As Object, e As EventArgs) Handles btnGB.Click
@@ -36,29 +39,46 @@
 
     Private Sub btnStartRitual_Click(sender As Object, e As EventArgs) Handles btnStartRitual.Click
         Static repeticiones As Integer = 1
-        MsgBox("Ha comenzado el ritual de pesado")
-        For counter = 1 To 3
+        MsgBox("Ha comenzado el ritual de pesado", vbOKOnly, "Inicio")
+        For counter = 1 To 3 ' Realizando la lectura de los pesos
             Me.miembroInfo.InsertarPeso(leer.readingDouble($"Ingrese el peso marcado en la bascula N{counter}"))
         Next
-        MsgBox("Se ha completado el ritual")
+        MsgBox("Se ha completado el ritual", vbOKOnly, "Inicio")
         Me.miembroInfo.CalcularPromedio()
+        InsertarData()
         If repeticiones > 1 Then
             Me.btnChangeW.Visible = True
         End If
-    End Sub
-
-    Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.GotFocus
-        ' Haciendo un recorrido dentro del registro para añadir sus valores al listBox
-        ' Siempre y cuando la lista de registro tenga algun valor
-        If Me.miembroInfo.Get_Registro().Count Then
-            Me.miembroInfo.Get_Registro().ForEach(Sub(val)
-                                                      lbData.Items.Add(val)
-                                                  End Sub
-                                            )
-        End If
+        repeticiones += 1
     End Sub
 
     Private Sub btnChangeW_Click(sender As Object, e As EventArgs) Handles btnChangeW.Click
-        MsgBox(Me.miembroInfo.ObtenerComentario())
+        Dim comment = Me.miembroInfo.ObtenerComentario()
+        If comment.Equals("SUBIO") Then
+            MsgBox(comment, vbCritical, "Directo al gym")
+        Else
+            MsgBox(comment, vbInformation, "Mantengamos la linea")
+        End If
+    End Sub
+
+    Private Sub InsertarData()
+        Dim lista As List(Of Double) = Me.miembroInfo.Get_Registro()
+        Dim data As Double
+        Dim anterior As Double
+        ' Haciendo un recorrido dentro del registro para añadir sus valores al listBox
+        For i = 0 To lista.Count - 1
+            If lbData.Items.Count = 0 Then ' Si la lista esta vacia
+                data = lista(lbData.Items.Count) ' Se le da el tamaño de count porque es cero
+                lbData.Items.Add(data)
+            Else
+                If i > 0 Then ' Hacer el salto de posicion porque se supone que ya se ingreso mas de un valor
+                    anterior = lista(i - 1)
+                    data = lista(i)
+                    If data <> anterior Then
+                        lbData.Items.Add(data)
+                    End If
+                End If
+            End If
+        Next
     End Sub
 End Class

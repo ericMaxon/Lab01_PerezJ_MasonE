@@ -58,7 +58,7 @@ Partial Class LogIn
         Me.tbxPass.Name = "tbxPass"
         Me.tbxPass.PlaceholderText = "Contraseña"
         Me.tbxPass.Size = New System.Drawing.Size(100, 23)
-        Me.tbxPass.TabIndex = 16
+        Me.tbxPass.TabIndex = 2
         Me.tbxPass.UseSystemPasswordChar = True
         '
         'lblPassword
@@ -67,7 +67,7 @@ Partial Class LogIn
         Me.lblPassword.Location = New System.Drawing.Point(114, 167)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(67, 15)
-        Me.lblPassword.TabIndex = 15
+        Me.lblPassword.TabIndex = 20
         Me.lblPassword.Text = "Contraseña"
         '
         'tbxUser
@@ -76,7 +76,7 @@ Partial Class LogIn
         Me.tbxUser.Name = "tbxUser"
         Me.tbxUser.PlaceholderText = "Usuario"
         Me.tbxUser.Size = New System.Drawing.Size(100, 23)
-        Me.tbxUser.TabIndex = 14
+        Me.tbxUser.TabIndex = 1
         '
         'lblUser
         '
@@ -84,14 +84,14 @@ Partial Class LogIn
         Me.lblUser.Location = New System.Drawing.Point(131, 101)
         Me.lblUser.Name = "lblUser"
         Me.lblUser.Size = New System.Drawing.Size(47, 15)
-        Me.lblUser.TabIndex = 13
+        Me.lblUser.TabIndex = 19
         Me.lblUser.Text = "Usuario"
         '
         'Title
         '
         Me.Title.AutoSize = True
         Me.Title.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Title.Location = New System.Drawing.Point(184, 24)
+        Me.Title.Location = New System.Drawing.Point(210, 25)
         Me.Title.Name = "Title"
         Me.Title.Size = New System.Drawing.Size(100, 21)
         Me.Title.TabIndex = 12
@@ -99,19 +99,19 @@ Partial Class LogIn
         '
         'btnGoBack
         '
-        Me.btnGoBack.Location = New System.Drawing.Point(277, 284)
+        Me.btnGoBack.Location = New System.Drawing.Point(326, 284)
         Me.btnGoBack.Name = "btnGoBack"
         Me.btnGoBack.Size = New System.Drawing.Size(75, 29)
-        Me.btnGoBack.TabIndex = 11
+        Me.btnGoBack.TabIndex = 5
         Me.btnGoBack.Text = "Regresar"
         Me.btnGoBack.UseVisualStyleBackColor = True
         '
         'btnLng
         '
-        Me.btnLng.Location = New System.Drawing.Point(148, 284)
+        Me.btnLng.Location = New System.Drawing.Point(166, 284)
         Me.btnLng.Name = "btnLng"
         Me.btnLng.Size = New System.Drawing.Size(75, 29)
-        Me.btnLng.TabIndex = 10
+        Me.btnLng.TabIndex = 4
         Me.btnLng.Text = "Iniciar sesion"
         Me.btnLng.UseVisualStyleBackColor = True
         '
@@ -120,7 +120,7 @@ Partial Class LogIn
         Me.btnShowPassword.Location = New System.Drawing.Point(358, 167)
         Me.btnShowPassword.Name = "btnShowPassword"
         Me.btnShowPassword.Size = New System.Drawing.Size(127, 23)
-        Me.btnShowPassword.TabIndex = 18
+        Me.btnShowPassword.TabIndex = 3
         Me.btnShowPassword.Text = "Mostrar contraseña"
         Me.btnShowPassword.UseVisualStyleBackColor = False
         '

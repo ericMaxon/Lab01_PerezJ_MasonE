@@ -41,7 +41,7 @@ Partial Class Register
         Me.tbxPass.Name = "tbxPass"
         Me.tbxPass.PlaceholderText = "Contraseña"
         Me.tbxPass.Size = New System.Drawing.Size(100, 23)
-        Me.tbxPass.TabIndex = 16
+        Me.tbxPass.TabIndex = 3
         Me.tbxPass.UseSystemPasswordChar = True
         '
         'lblPassword
@@ -59,7 +59,7 @@ Partial Class Register
         Me.tbxUser.Name = "tbxUser"
         Me.tbxUser.PlaceholderText = "Usuario"
         Me.tbxUser.Size = New System.Drawing.Size(100, 23)
-        Me.tbxUser.TabIndex = 14
+        Me.tbxUser.TabIndex = 2
         '
         'lblUser
         '
@@ -85,7 +85,7 @@ Partial Class Register
         Me.btnHveAcc.Location = New System.Drawing.Point(395, 321)
         Me.btnHveAcc.Name = "btnHveAcc"
         Me.btnHveAcc.Size = New System.Drawing.Size(112, 29)
-        Me.btnHveAcc.TabIndex = 11
+        Me.btnHveAcc.TabIndex = 6
         Me.btnHveAcc.Text = "Ya tengo cuenta"
         Me.btnHveAcc.UseVisualStyleBackColor = True
         '
@@ -94,7 +94,7 @@ Partial Class Register
         Me.btnCreate.Location = New System.Drawing.Point(119, 321)
         Me.btnCreate.Name = "btnCreate"
         Me.btnCreate.Size = New System.Drawing.Size(119, 29)
-        Me.btnCreate.TabIndex = 10
+        Me.btnCreate.TabIndex = 5
         Me.btnCreate.Text = "Crear usuario"
         Me.btnCreate.UseVisualStyleBackColor = True
         '
@@ -103,7 +103,7 @@ Partial Class Register
         Me.btnShowPassword.Location = New System.Drawing.Point(397, 196)
         Me.btnShowPassword.Name = "btnShowPassword"
         Me.btnShowPassword.Size = New System.Drawing.Size(140, 23)
-        Me.btnShowPassword.TabIndex = 17
+        Me.btnShowPassword.TabIndex = 4
         Me.btnShowPassword.Text = "Mostrar contraseña"
         Me.btnShowPassword.UseVisualStyleBackColor = False
         '
@@ -122,14 +122,14 @@ Partial Class Register
         Me.tbxName.Name = "tbxName"
         Me.tbxName.PlaceholderText = "Nombre"
         Me.tbxName.Size = New System.Drawing.Size(100, 23)
-        Me.tbxName.TabIndex = 19
+        Me.tbxName.TabIndex = 1
         '
         'btnFinish
         '
         Me.btnFinish.Location = New System.Drawing.Point(280, 376)
         Me.btnFinish.Name = "btnFinish"
         Me.btnFinish.Size = New System.Drawing.Size(75, 23)
-        Me.btnFinish.TabIndex = 20
+        Me.btnFinish.TabIndex = 7
         Me.btnFinish.Text = "Terminar"
         Me.btnFinish.UseVisualStyleBackColor = True
         '
