@@ -55,8 +55,11 @@
     End Sub
 
     Private Sub ResetValue()
+        Me.tbxName.ResetText()
         Me.tbxPass.ResetText()
         Me.tbxUser.ResetText()
+        userCred = Nothing
+        nombre = ""
     End Sub
 
     Private Sub btnFinish_Click(sender As Object, e As EventArgs) Handles btnFinish.Click

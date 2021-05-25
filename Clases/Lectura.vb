@@ -17,7 +17,7 @@
         Do
             Try
                 err = False
-                Me.Input = Double.Parse(InputBox(mensaje))
+                Me.Input = Double.Parse(InputBox(mensaje, "Datos de entrada"))
                 If (Me.Input <= 0) Then
                     MsgBox("Ingrese un valor valido", vbExclamation, "ERROR")
                     err = Not err

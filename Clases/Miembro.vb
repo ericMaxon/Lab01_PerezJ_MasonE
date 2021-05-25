@@ -33,16 +33,15 @@
         Dim cantidadPesos As Integer = Pesos.Count
         For Each peso As Double In Pesos
             acumuladorPesos += peso
-            ' Se eliminan los pesos para reiniciar la Lista de Pesos
-            Pesos.Remove(peso)
         Next
         RegistroDePromedio.Add(acumuladorPesos / cantidadPesos)
+        Pesos.Clear()
     End Sub
     Public Function ObtenerComentario() As String
         ' Se verifica que en el registro se haya ingresado mas de 1 promedio
         If RegistroDePromedio.Count > 1 Then
             Dim promedioAnterior As Double = RegistroDePromedio.ElementAt(RegistroDePromedio.Count - 2) ' Sacando el valor anterior
-            Dim diferencia As Double = promedioAnterior - RegistroDePromedio.Last()
+            Dim diferencia As Double = RegistroDePromedio.Last() - promedioAnterior
             If diferencia > 0 Then
                 Return "SUBIO"
             Else
@@ -62,8 +61,5 @@
     End Function
     Public Function Get_Registro() As List(Of Double)
         Return RegistroDePromedio
-    End Function
-    Public Function Get_Pesos() As List(Of Double)
-        Return Pesos
     End Function
 End Class

@@ -39,7 +39,7 @@ Partial Class Main
         '
         Me.title.AutoSize = True
         Me.title.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.title.Location = New System.Drawing.Point(257, 19)
+        Me.title.Location = New System.Drawing.Point(178, 9)
         Me.title.Name = "title"
         Me.title.Size = New System.Drawing.Size(121, 30)
         Me.title.TabIndex = 0
@@ -111,12 +111,13 @@ Partial Class Main
         '
         Me.lbData.CausesValidation = False
         Me.lbData.FormattingEnabled = True
+        Me.lbData.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.lbData.ItemHeight = 15
         Me.lbData.Location = New System.Drawing.Point(142, 179)
         Me.lbData.MultiColumn = True
         Me.lbData.Name = "lbData"
         Me.lbData.SelectionMode = System.Windows.Forms.SelectionMode.None
-        Me.lbData.Size = New System.Drawing.Size(186, 49)
+        Me.lbData.Size = New System.Drawing.Size(186, 94)
         Me.lbData.TabIndex = 9
         Me.lbData.TabStop = False
         '
