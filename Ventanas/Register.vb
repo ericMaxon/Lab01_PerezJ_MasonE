@@ -59,4 +59,7 @@
         Me.tbxUser.ResetText()
     End Sub
 
+    Private Sub btnFinish_Click(sender As Object, e As EventArgs) Handles btnFinish.Click
+        MyBase.Dispose()
+    End Sub
 End Class

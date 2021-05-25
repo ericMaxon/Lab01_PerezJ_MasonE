@@ -54,7 +54,7 @@ Partial Class LogIn
         '
         'tbxPass
         '
-        Me.tbxPass.Location = New System.Drawing.Point(356, 198)
+        Me.tbxPass.Location = New System.Drawing.Point(252, 167)
         Me.tbxPass.Name = "tbxPass"
         Me.tbxPass.PlaceholderText = "Contraseña"
         Me.tbxPass.Size = New System.Drawing.Size(100, 23)
@@ -64,7 +64,7 @@ Partial Class LogIn
         'lblPassword
         '
         Me.lblPassword.AutoSize = True
-        Me.lblPassword.Location = New System.Drawing.Point(218, 198)
+        Me.lblPassword.Location = New System.Drawing.Point(114, 167)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(67, 15)
         Me.lblPassword.TabIndex = 15
@@ -72,7 +72,7 @@ Partial Class LogIn
         '
         'tbxUser
         '
-        Me.tbxUser.Location = New System.Drawing.Point(356, 132)
+        Me.tbxUser.Location = New System.Drawing.Point(252, 101)
         Me.tbxUser.Name = "tbxUser"
         Me.tbxUser.PlaceholderText = "Usuario"
         Me.tbxUser.Size = New System.Drawing.Size(100, 23)
@@ -81,7 +81,7 @@ Partial Class LogIn
         'lblUser
         '
         Me.lblUser.AutoSize = True
-        Me.lblUser.Location = New System.Drawing.Point(235, 132)
+        Me.lblUser.Location = New System.Drawing.Point(131, 101)
         Me.lblUser.Name = "lblUser"
         Me.lblUser.Size = New System.Drawing.Size(47, 15)
         Me.lblUser.TabIndex = 13
@@ -90,16 +90,16 @@ Partial Class LogIn
         'Title
         '
         Me.Title.AutoSize = True
-        Me.Title.Font = New System.Drawing.Font("Segoe UI Emoji", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Title.Location = New System.Drawing.Point(288, 55)
+        Me.Title.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Title.Location = New System.Drawing.Point(184, 24)
         Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(75, 16)
+        Me.Title.Size = New System.Drawing.Size(100, 21)
         Me.Title.TabIndex = 12
         Me.Title.Text = "Iniciar sesion"
         '
         'btnGoBack
         '
-        Me.btnGoBack.Location = New System.Drawing.Point(381, 315)
+        Me.btnGoBack.Location = New System.Drawing.Point(277, 284)
         Me.btnGoBack.Name = "btnGoBack"
         Me.btnGoBack.Size = New System.Drawing.Size(75, 29)
         Me.btnGoBack.TabIndex = 11
@@ -108,7 +108,7 @@ Partial Class LogIn
         '
         'btnLng
         '
-        Me.btnLng.Location = New System.Drawing.Point(252, 315)
+        Me.btnLng.Location = New System.Drawing.Point(148, 284)
         Me.btnLng.Name = "btnLng"
         Me.btnLng.Size = New System.Drawing.Size(75, 29)
         Me.btnLng.TabIndex = 10
@@ -117,7 +117,7 @@ Partial Class LogIn
         '
         'btnShowPassword
         '
-        Me.btnShowPassword.Location = New System.Drawing.Point(462, 198)
+        Me.btnShowPassword.Location = New System.Drawing.Point(358, 167)
         Me.btnShowPassword.Name = "btnShowPassword"
         Me.btnShowPassword.Size = New System.Drawing.Size(127, 23)
         Me.btnShowPassword.TabIndex = 18
@@ -128,7 +128,7 @@ Partial Class LogIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(642, 399)
+        Me.ClientSize = New System.Drawing.Size(554, 379)
         Me.Controls.Add(Me.btnShowPassword)
         Me.Controls.Add(Me.tbxPass)
         Me.Controls.Add(Me.lblPassword)
@@ -137,6 +137,8 @@ Partial Class LogIn
         Me.Controls.Add(Me.Title)
         Me.Controls.Add(Me.btnGoBack)
         Me.Controls.Add(Me.btnLng)
+        Me.MaximumSize = New System.Drawing.Size(570, 418)
+        Me.MinimumSize = New System.Drawing.Size(570, 39)
         Me.Name = "LogIn"
         Me.Text = "Login"
         Me.ResumeLayout(False)

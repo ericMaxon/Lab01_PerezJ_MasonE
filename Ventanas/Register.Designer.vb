@@ -73,12 +73,12 @@ Partial Class Register
         'Title
         '
         Me.Title.AutoSize = True
-        Me.Title.Font = New System.Drawing.Font("Segoe UI Emoji", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Title.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Title.Location = New System.Drawing.Point(248, 30)
         Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(123, 16)
+        Me.Title.Size = New System.Drawing.Size(121, 21)
         Me.Title.TabIndex = 12
-        Me.Title.Text = "Crear nuevo miembro"
+        Me.Title.Text = "Miembro nuevo"
         '
         'btnHveAcc
         '

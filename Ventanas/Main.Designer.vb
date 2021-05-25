@@ -32,6 +32,7 @@ Partial Class Main
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbData = New System.Windows.Forms.ListBox()
         Me.btnStartRitual = New System.Windows.Forms.Button()
+        Me.btnChangeW = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'title
@@ -81,7 +82,7 @@ Partial Class Main
         '
         'btnGB
         '
-        Me.btnGB.Location = New System.Drawing.Point(514, 341)
+        Me.btnGB.Location = New System.Drawing.Point(402, 331)
         Me.btnGB.Name = "btnGB"
         Me.btnGB.Size = New System.Drawing.Size(75, 23)
         Me.btnGB.TabIndex = 6
@@ -128,11 +129,23 @@ Partial Class Main
         Me.btnStartRitual.Text = "Empezar ritual"
         Me.btnStartRitual.UseVisualStyleBackColor = True
         '
+        'btnChangeW
+        '
+        Me.btnChangeW.AutoSize = True
+        Me.btnChangeW.Location = New System.Drawing.Point(157, 280)
+        Me.btnChangeW.Name = "btnChangeW"
+        Me.btnChangeW.Size = New System.Drawing.Size(129, 25)
+        Me.btnChangeW.TabIndex = 11
+        Me.btnChangeW.Text = "¿Subí o baje de peso?"
+        Me.btnChangeW.UseVisualStyleBackColor = False
+        Me.btnChangeW.Visible = False
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(654, 405)
+        Me.ClientSize = New System.Drawing.Size(521, 372)
+        Me.Controls.Add(Me.btnChangeW)
         Me.Controls.Add(Me.btnStartRitual)
         Me.Controls.Add(Me.lbData)
         Me.Controls.Add(Me.Label1)
@@ -143,7 +156,10 @@ Partial Class Main
         Me.Controls.Add(Me.tbxUser)
         Me.Controls.Add(Me.lblUser)
         Me.Controls.Add(Me.title)
+        Me.MaximumSize = New System.Drawing.Size(537, 411)
+        Me.MinimumSize = New System.Drawing.Size(537, 411)
         Me.Name = "Main"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -160,4 +176,5 @@ Partial Class Main
     Friend WithEvents Label1 As Label
     Friend WithEvents lbData As ListBox
     Friend WithEvents btnStartRitual As Button
+    Friend WithEvents btnChangeW As Button
 End Class
