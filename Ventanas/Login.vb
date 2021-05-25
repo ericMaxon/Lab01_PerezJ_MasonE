@@ -155,8 +155,9 @@ Partial Class LogIn
         Me.userCred.PwProp = Me.tbxPass.Text
     End Sub
     Private Sub btnLng_Click(sender As Object, e As EventArgs) Handles btnLng.Click
-        Dim response As IUserCredentials = Me.Store.ValidateUser(Me.userCred)
-        If (response IsNot Nothing) Then
+        Dim responseID As String = Me.Store.ValidateUser(Me.userCred.UserProp, Me.userCred.PwProp)
+        If (responseID IsNot Nothing) Then
+            Dim response As Miembro = Me.Store.GetMember(responseID)
             navHistory.Last().Hide()
             navHistory.Add(New Main(Me.Store, response, Me.navHistory))
             ResetValue()
