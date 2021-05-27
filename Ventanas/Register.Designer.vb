@@ -156,6 +156,8 @@ Partial Class Register
         Me.Controls.Add(Me.btnHveAcc)
         Me.Controls.Add(Me.btnCreate)
         Me.Font = New System.Drawing.Font("Segoe UI Emoji", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.MaximumSize = New System.Drawing.Size(602, 450)
+        Me.MinimumSize = New System.Drawing.Size(602, 450)
         Me.Name = "Register"
         Me.Text = "Register"
         Me.ResumeLayout(False)
