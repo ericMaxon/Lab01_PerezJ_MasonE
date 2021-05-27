@@ -93,7 +93,7 @@ Partial Class LogIn
         '
         Me.Title.AutoSize = True
         Me.Title.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Title.Location = New System.Drawing.Point(201, 33)
+        Me.Title.Location = New System.Drawing.Point(213, 32)
         Me.Title.Name = "Title"
         Me.Title.Size = New System.Drawing.Size(122, 25)
         Me.Title.TabIndex = 12

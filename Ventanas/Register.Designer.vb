@@ -22,6 +22,7 @@ Partial Class Register
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Register))
         Me.tbxPass = New System.Windows.Forms.TextBox()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.tbxUser = New System.Windows.Forms.TextBox()
@@ -47,6 +48,7 @@ Partial Class Register
         'lblPassword
         '
         Me.lblPassword.AutoSize = True
+        Me.lblPassword.BackColor = System.Drawing.Color.Transparent
         Me.lblPassword.Location = New System.Drawing.Point(181, 199)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(57, 16)
@@ -64,6 +66,7 @@ Partial Class Register
         'lblUser
         '
         Me.lblUser.AutoSize = True
+        Me.lblUser.BackColor = System.Drawing.Color.Transparent
         Me.lblUser.Location = New System.Drawing.Point(208, 142)
         Me.lblUser.Name = "lblUser"
         Me.lblUser.Size = New System.Drawing.Size(30, 16)
@@ -73,10 +76,10 @@ Partial Class Register
         'Title
         '
         Me.Title.AutoSize = True
-        Me.Title.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Title.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Title.Location = New System.Drawing.Point(248, 30)
         Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(121, 21)
+        Me.Title.Size = New System.Drawing.Size(146, 26)
         Me.Title.TabIndex = 12
         Me.Title.Text = "Miembro nuevo"
         '
@@ -100,9 +103,11 @@ Partial Class Register
         '
         'btnShowPassword
         '
-        Me.btnShowPassword.Location = New System.Drawing.Point(397, 196)
+        Me.btnShowPassword.BackColor = System.Drawing.SystemColors.Control
+        Me.btnShowPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnShowPassword.Location = New System.Drawing.Point(397, 189)
         Me.btnShowPassword.Name = "btnShowPassword"
-        Me.btnShowPassword.Size = New System.Drawing.Size(140, 23)
+        Me.btnShowPassword.Size = New System.Drawing.Size(140, 36)
         Me.btnShowPassword.TabIndex = 4
         Me.btnShowPassword.Text = "Mostrar contraseña"
         Me.btnShowPassword.UseVisualStyleBackColor = False
@@ -137,6 +142,7 @@ Partial Class Register
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(586, 411)
         Me.Controls.Add(Me.btnFinish)
         Me.Controls.Add(Me.tbxName)
@@ -150,6 +156,8 @@ Partial Class Register
         Me.Controls.Add(Me.btnHveAcc)
         Me.Controls.Add(Me.btnCreate)
         Me.Font = New System.Drawing.Font("Segoe UI Emoji", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.MaximumSize = New System.Drawing.Size(602, 450)
+        Me.MinimumSize = New System.Drawing.Size(602, 450)
         Me.Name = "Register"
         Me.Text = "Register"
         Me.ResumeLayout(False)
