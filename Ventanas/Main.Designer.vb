@@ -57,7 +57,7 @@ Partial Class Main
         '
         'tbxUser
         '
-        Me.tbxUser.Location = New System.Drawing.Point(139, 80)
+        Me.tbxUser.Location = New System.Drawing.Point(101, 81)
         Me.tbxUser.Name = "tbxUser"
         Me.tbxUser.ReadOnly = True
         Me.tbxUser.Size = New System.Drawing.Size(75, 23)
@@ -65,7 +65,7 @@ Partial Class Main
         '
         'tbxPass
         '
-        Me.tbxPass.Location = New System.Drawing.Point(139, 109)
+        Me.tbxPass.Location = New System.Drawing.Point(292, 80)
         Me.tbxPass.Name = "tbxPass"
         Me.tbxPass.ReadOnly = True
         Me.tbxPass.Size = New System.Drawing.Size(75, 23)
@@ -75,7 +75,7 @@ Partial Class Main
         'lblPass
         '
         Me.lblPass.AutoSize = True
-        Me.lblPass.Location = New System.Drawing.Point(26, 117)
+        Me.lblPass.Location = New System.Drawing.Point(229, 88)
         Me.lblPass.Name = "lblPass"
         Me.lblPass.Size = New System.Drawing.Size(57, 15)
         Me.lblPass.TabIndex = 3
@@ -87,7 +87,7 @@ Partial Class Main
         Me.btnGB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnGB.FlatAppearance.BorderSize = 0
         Me.btnGB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGB.Location = New System.Drawing.Point(378, 318)
+        Me.btnGB.Location = New System.Drawing.Point(22, 307)
         Me.btnGB.Name = "btnGB"
         Me.btnGB.Size = New System.Drawing.Size(99, 36)
         Me.btnGB.TabIndex = 6
@@ -96,9 +96,13 @@ Partial Class Main
         '
         'btnShowPassword
         '
-        Me.btnShowPassword.Location = New System.Drawing.Point(220, 109)
+        Me.btnShowPassword.BackgroundImage = CType(resources.GetObject("btnShowPassword.BackgroundImage"), System.Drawing.Image)
+        Me.btnShowPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnShowPassword.FlatAppearance.BorderSize = 0
+        Me.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnShowPassword.Location = New System.Drawing.Point(389, 80)
         Me.btnShowPassword.Name = "btnShowPassword"
-        Me.btnShowPassword.Size = New System.Drawing.Size(105, 23)
+        Me.btnShowPassword.Size = New System.Drawing.Size(105, 24)
         Me.btnShowPassword.TabIndex = 7
         Me.btnShowPassword.Text = "Ver contraseña"
         Me.btnShowPassword.UseVisualStyleBackColor = True
@@ -106,7 +110,8 @@ Partial Class Main
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(26, 179)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Location = New System.Drawing.Point(149, 153)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(110, 15)
         Me.Label1.TabIndex = 8
@@ -118,7 +123,7 @@ Partial Class Main
         Me.lbData.FormattingEnabled = True
         Me.lbData.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.lbData.ItemHeight = 15
-        Me.lbData.Location = New System.Drawing.Point(142, 179)
+        Me.lbData.Location = New System.Drawing.Point(265, 153)
         Me.lbData.MultiColumn = True
         Me.lbData.Name = "lbData"
         Me.lbData.SelectionMode = System.Windows.Forms.SelectionMode.None
@@ -128,17 +133,27 @@ Partial Class Main
         '
         'btnStartRitual
         '
-        Me.btnStartRitual.Location = New System.Drawing.Point(26, 281)
+        Me.btnStartRitual.BackColor = System.Drawing.Color.Transparent
+        Me.btnStartRitual.BackgroundImage = CType(resources.GetObject("btnStartRitual.BackgroundImage"), System.Drawing.Image)
+        Me.btnStartRitual.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnStartRitual.FlatAppearance.BorderSize = 0
+        Me.btnStartRitual.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnStartRitual.Location = New System.Drawing.Point(26, 198)
         Me.btnStartRitual.Name = "btnStartRitual"
         Me.btnStartRitual.Size = New System.Drawing.Size(95, 23)
         Me.btnStartRitual.TabIndex = 10
         Me.btnStartRitual.Text = "Empezar ritual"
-        Me.btnStartRitual.UseVisualStyleBackColor = True
+        Me.btnStartRitual.UseVisualStyleBackColor = False
         '
         'btnChangeW
         '
         Me.btnChangeW.AutoSize = True
-        Me.btnChangeW.Location = New System.Drawing.Point(157, 280)
+        Me.btnChangeW.BackColor = System.Drawing.Color.Transparent
+        Me.btnChangeW.BackgroundImage = CType(resources.GetObject("btnChangeW.BackgroundImage"), System.Drawing.Image)
+        Me.btnChangeW.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnChangeW.FlatAppearance.BorderSize = 0
+        Me.btnChangeW.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnChangeW.Location = New System.Drawing.Point(12, 243)
         Me.btnChangeW.Name = "btnChangeW"
         Me.btnChangeW.Size = New System.Drawing.Size(129, 25)
         Me.btnChangeW.TabIndex = 11
@@ -151,7 +166,7 @@ Partial Class Main
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(521, 372)
+        Me.ClientSize = New System.Drawing.Size(579, 414)
         Me.Controls.Add(Me.btnChangeW)
         Me.Controls.Add(Me.btnStartRitual)
         Me.Controls.Add(Me.lbData)
@@ -163,7 +178,8 @@ Partial Class Main
         Me.Controls.Add(Me.tbxUser)
         Me.Controls.Add(Me.lblUser)
         Me.Controls.Add(Me.title)
-        Me.MaximumSize = New System.Drawing.Size(537, 411)
+        Me.DoubleBuffered = True
+        Me.MaximumSize = New System.Drawing.Size(600, 511)
         Me.MinimumSize = New System.Drawing.Size(537, 411)
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
