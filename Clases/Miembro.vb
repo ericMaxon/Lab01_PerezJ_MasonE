@@ -34,7 +34,7 @@
         For Each peso As Double In Pesos
             acumuladorPesos += peso
         Next
-        RegistroDePromedio.Add(acumuladorPesos / cantidadPesos)
+        RegistroDePromedio.Add(Math.Round(acumuladorPesos / cantidadPesos, 2))
         Pesos.Clear()
     End Sub
     Public Function ObtenerComentario() As String
@@ -44,6 +44,8 @@
             Dim diferencia As Double = RegistroDePromedio.Last() - promedioAnterior
             If diferencia > 0 Then
                 Return "SUBIO"
+            ElseIf diferencia = 0 Then
+                Return "NO HUBO CAMBIOS"
             Else
                 Return "BAJO"
             End If
