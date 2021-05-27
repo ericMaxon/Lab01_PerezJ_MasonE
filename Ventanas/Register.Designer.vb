@@ -76,10 +76,10 @@ Partial Class Register
         'Title
         '
         Me.Title.AutoSize = True
-        Me.Title.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Title.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Title.Location = New System.Drawing.Point(248, 30)
         Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(121, 21)
+        Me.Title.Size = New System.Drawing.Size(146, 26)
         Me.Title.TabIndex = 12
         Me.Title.Text = "Miembro nuevo"
         '
@@ -103,11 +103,8 @@ Partial Class Register
         '
         'btnShowPassword
         '
-        Me.btnShowPassword.BackColor = System.Drawing.Color.Transparent
-        Me.btnShowPassword.BackgroundImage = CType(resources.GetObject("btnShowPassword.BackgroundImage"), System.Drawing.Image)
+        Me.btnShowPassword.BackColor = System.Drawing.SystemColors.Control
         Me.btnShowPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnShowPassword.FlatAppearance.BorderSize = 0
-        Me.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnShowPassword.Location = New System.Drawing.Point(397, 189)
         Me.btnShowPassword.Name = "btnShowPassword"
         Me.btnShowPassword.Size = New System.Drawing.Size(140, 36)
