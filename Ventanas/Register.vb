@@ -58,7 +58,8 @@
         Me.tbxName.ResetText()
         Me.tbxPass.ResetText()
         Me.tbxUser.ResetText()
-        userCred = Nothing
+        userCred.UserProp = ""
+        userCred.PwProp = ""
         nombre = ""
     End Sub
 

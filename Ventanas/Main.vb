@@ -18,7 +18,8 @@
         Me.tbxPass.PlaceholderText = Me.miembroInfo.Get_Pass()
         If Me.miembroInfo.Get_Registro().Count Then
             InsertarData()
-        End If
+            Me.btnChangeW.Visible = True
+            End If
     End Sub
 
     Private Sub btnGB_Click(sender As Object, e As EventArgs) Handles btnGB.Click
@@ -45,7 +46,7 @@
         MsgBox("Se ha completado el ritual", vbOKOnly, "Inicio")
         Me.miembroInfo.CalcularPromedio()
         InsertarData()
-        If Me.lbData.Items.Count > 1 Then
+        If Me.lbData.Items.Count >= 1 Then
             Me.btnChangeW.Visible = True
         End If
     End Sub
@@ -69,7 +70,7 @@
                 data = lista(lbData.Items.Count) ' Se le da el tamaño de count porque es cero
                 lbData.Items.Add(data)
             Else
-                If i > lbData.Items.Count Then ' Hacer el salto de posicion porque se supone que ya se ingreso mas de un valor
+                If i > lbData.Items.Count - 1 Then ' Hacer el salto de posicion porque se supone que ya se ingreso mas de un valor
                     anterior = lista(i - 1)
                     data = lista(i)
                     If data <> anterior Then
