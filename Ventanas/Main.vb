@@ -38,7 +38,6 @@
     End Sub
 
     Private Sub btnStartRitual_Click(sender As Object, e As EventArgs) Handles btnStartRitual.Click
-        Static repeticiones As Integer = 1
         MsgBox("Ha comenzado el ritual de pesado", vbOKOnly, "Inicio")
         For counter = 1 To 3 ' Realizando la lectura de los pesos
             Me.miembroInfo.InsertarPeso(leer.readingDouble($"Ingrese el peso marcado en la bascula N{counter}"))
@@ -46,10 +45,9 @@
         MsgBox("Se ha completado el ritual", vbOKOnly, "Inicio")
         Me.miembroInfo.CalcularPromedio()
         InsertarData()
-        If repeticiones > 1 Then
+        If Me.lbData.Items.Count > 1 Then
             Me.btnChangeW.Visible = True
         End If
-        repeticiones += 1
     End Sub
 
     Private Sub btnChangeW_Click(sender As Object, e As EventArgs) Handles btnChangeW.Click
