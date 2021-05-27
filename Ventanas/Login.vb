@@ -42,6 +42,7 @@ Partial Class LogIn
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LogIn))
         Me.tbxPass = New System.Windows.Forms.TextBox()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.tbxUser = New System.Windows.Forms.TextBox()
@@ -54,7 +55,7 @@ Partial Class LogIn
         '
         'tbxPass
         '
-        Me.tbxPass.Location = New System.Drawing.Point(252, 167)
+        Me.tbxPass.Location = New System.Drawing.Point(223, 166)
         Me.tbxPass.Name = "tbxPass"
         Me.tbxPass.PlaceholderText = "Contraseña"
         Me.tbxPass.Size = New System.Drawing.Size(100, 23)
@@ -64,15 +65,16 @@ Partial Class LogIn
         'lblPassword
         '
         Me.lblPassword.AutoSize = True
-        Me.lblPassword.Location = New System.Drawing.Point(114, 167)
+        Me.lblPassword.BackColor = System.Drawing.Color.Transparent
+        Me.lblPassword.Location = New System.Drawing.Point(127, 174)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(67, 15)
+        Me.lblPassword.Size = New System.Drawing.Size(66, 15)
         Me.lblPassword.TabIndex = 20
         Me.lblPassword.Text = "Contraseña"
         '
         'tbxUser
         '
-        Me.tbxUser.Location = New System.Drawing.Point(252, 101)
+        Me.tbxUser.Location = New System.Drawing.Point(223, 99)
         Me.tbxUser.Name = "tbxUser"
         Me.tbxUser.PlaceholderText = "Usuario"
         Me.tbxUser.Size = New System.Drawing.Size(100, 23)
@@ -81,7 +83,7 @@ Partial Class LogIn
         'lblUser
         '
         Me.lblUser.AutoSize = True
-        Me.lblUser.Location = New System.Drawing.Point(131, 101)
+        Me.lblUser.Location = New System.Drawing.Point(146, 107)
         Me.lblUser.Name = "lblUser"
         Me.lblUser.Size = New System.Drawing.Size(47, 15)
         Me.lblUser.TabIndex = 19
@@ -90,34 +92,46 @@ Partial Class LogIn
         'Title
         '
         Me.Title.AutoSize = True
-        Me.Title.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Title.Location = New System.Drawing.Point(210, 25)
+        Me.Title.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Title.Location = New System.Drawing.Point(201, 33)
         Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(100, 21)
+        Me.Title.Size = New System.Drawing.Size(122, 25)
         Me.Title.TabIndex = 12
         Me.Title.Text = "Iniciar sesion"
         '
         'btnGoBack
         '
-        Me.btnGoBack.Location = New System.Drawing.Point(326, 284)
+        Me.btnGoBack.BackColor = System.Drawing.Color.Transparent
+        Me.btnGoBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnGoBack.FlatAppearance.BorderSize = 0
+        Me.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGoBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnGoBack.Image = CType(resources.GetObject("btnGoBack.Image"), System.Drawing.Image)
+        Me.btnGoBack.Location = New System.Drawing.Point(12, 258)
         Me.btnGoBack.Name = "btnGoBack"
-        Me.btnGoBack.Size = New System.Drawing.Size(75, 29)
+        Me.btnGoBack.Size = New System.Drawing.Size(103, 39)
         Me.btnGoBack.TabIndex = 5
         Me.btnGoBack.Text = "Regresar"
-        Me.btnGoBack.UseVisualStyleBackColor = True
+        Me.btnGoBack.UseVisualStyleBackColor = False
         '
         'btnLng
         '
-        Me.btnLng.Location = New System.Drawing.Point(166, 284)
+        Me.btnLng.BackColor = System.Drawing.Color.Transparent
+        Me.btnLng.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnLng.FlatAppearance.BorderSize = 0
+        Me.btnLng.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLng.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnLng.Image = CType(resources.GetObject("btnLng.Image"), System.Drawing.Image)
+        Me.btnLng.Location = New System.Drawing.Point(12, 199)
         Me.btnLng.Name = "btnLng"
-        Me.btnLng.Size = New System.Drawing.Size(75, 29)
+        Me.btnLng.Size = New System.Drawing.Size(103, 42)
         Me.btnLng.TabIndex = 4
         Me.btnLng.Text = "Iniciar sesion"
-        Me.btnLng.UseVisualStyleBackColor = True
+        Me.btnLng.UseVisualStyleBackColor = False
         '
         'btnShowPassword
         '
-        Me.btnShowPassword.Location = New System.Drawing.Point(358, 167)
+        Me.btnShowPassword.Location = New System.Drawing.Point(341, 165)
         Me.btnShowPassword.Name = "btnShowPassword"
         Me.btnShowPassword.Size = New System.Drawing.Size(127, 23)
         Me.btnShowPassword.TabIndex = 3
@@ -128,7 +142,10 @@ Partial Class LogIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(554, 379)
+        Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.ClientSize = New System.Drawing.Size(554, 326)
         Me.Controls.Add(Me.btnShowPassword)
         Me.Controls.Add(Me.tbxPass)
         Me.Controls.Add(Me.lblPassword)
@@ -137,6 +154,8 @@ Partial Class LogIn
         Me.Controls.Add(Me.Title)
         Me.Controls.Add(Me.btnGoBack)
         Me.Controls.Add(Me.btnLng)
+        Me.DoubleBuffered = True
+        Me.Font = New System.Drawing.Font("Yu Gothic UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.MaximumSize = New System.Drawing.Size(570, 418)
         Me.MinimumSize = New System.Drawing.Size(570, 39)
         Me.Name = "LogIn"
