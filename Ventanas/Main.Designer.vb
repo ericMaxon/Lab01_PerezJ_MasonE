@@ -22,6 +22,7 @@ Partial Class Main
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.title = New System.Windows.Forms.Label()
         Me.lblUser = New System.Windows.Forms.Label()
         Me.tbxUser = New System.Windows.Forms.TextBox()
@@ -82,9 +83,13 @@ Partial Class Main
         '
         'btnGB
         '
-        Me.btnGB.Location = New System.Drawing.Point(402, 331)
+        Me.btnGB.BackgroundImage = CType(resources.GetObject("btnGB.BackgroundImage"), System.Drawing.Image)
+        Me.btnGB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnGB.FlatAppearance.BorderSize = 0
+        Me.btnGB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGB.Location = New System.Drawing.Point(378, 318)
         Me.btnGB.Name = "btnGB"
-        Me.btnGB.Size = New System.Drawing.Size(75, 23)
+        Me.btnGB.Size = New System.Drawing.Size(99, 36)
         Me.btnGB.TabIndex = 6
         Me.btnGB.Text = "Go back"
         Me.btnGB.UseVisualStyleBackColor = True
@@ -145,6 +150,7 @@ Partial Class Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(521, 372)
         Me.Controls.Add(Me.btnChangeW)
         Me.Controls.Add(Me.btnStartRitual)
