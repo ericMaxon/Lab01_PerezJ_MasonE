@@ -74,7 +74,6 @@
                 If i > lbData.Items.Count Then ' Hacer el salto de posicion porque se supone que ya se ingreso mas de un valor
                     anterior = lista(i - 1)
                     data = lista(i)
-                    MsgBox($"Anterior {anterior} Data {data}")
                     If data <> anterior Then
                         lbData.Items.Add(data)
                     End If
