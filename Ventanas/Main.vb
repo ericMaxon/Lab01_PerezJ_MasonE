@@ -71,9 +71,10 @@
                 data = lista(lbData.Items.Count) ' Se le da el tamaño de count porque es cero
                 lbData.Items.Add(data)
             Else
-                If i > 0 Then ' Hacer el salto de posicion porque se supone que ya se ingreso mas de un valor
+                If i > lbData.Items.Count Then ' Hacer el salto de posicion porque se supone que ya se ingreso mas de un valor
                     anterior = lista(i - 1)
                     data = lista(i)
+                    MsgBox($"Anterior {anterior} Data {data}")
                     If data <> anterior Then
                         lbData.Items.Add(data)
                     End If
